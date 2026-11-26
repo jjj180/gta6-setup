@@ -4,7 +4,7 @@
   4 programy do RGB naraz (konflikt o kontroler Krakena), "game booster" i bloatware.
   ZOSTAWIA: NZXT CAM, Corsair iCUE, Razer Synapse, Logitech G HUB, SteelSeries GG,
             AORUS LCD Panel Service, Defender, zapore, Windows Update.
-  NIE dotyka: Valoranta, Riot Vanguard, Malwarebytes - to osobna decyzja (patrz nizej).
+  NIE dotyka: Valoranta ani Riot Vanguard - uzytkownik je zachowuje.
   Uruchom JAKO ADMINISTRATOR.
 #>
 
@@ -30,7 +30,8 @@ $doUsuniecia = @(
   @{ Nazwa='OpenRGB';          Powod='trzeci program do tego samego' },
   @{ Nazwa='RGB Fusion';       Powod='czwarty program do tego samego' },
   @{ Nazwa='Razer Cortex';     Powod='"game booster" - nic nie przyspiesza, dodaje narzut' },
-  @{ Nazwa='WebAdvisor';       Powod='bloatware McAfee' }
+  @{ Nazwa='WebAdvisor';       Powod='bloatware McAfee' },
+  @{ Nazwa='Malwarebytes';     Powod='drugi skaner w czasie rzeczywistym obok Defendera - zrodlo przycinek' }
 )
 
 $kluczeUninstall = @(
@@ -124,4 +125,4 @@ if (Test-Path $off) {
   Write-Host "Wklej mi te dane - ocenie, czy to zostawic. NIE usuwam tego sam." -ForegroundColor Yellow
 } else { Write-Host "   nie ma takiego pliku" -ForegroundColor DarkGray }
 
-Write-Host "`nNIE ruszalem: Valoranta, Riot Vanguard, Malwarebytes, Defendera, zapory, Windows Update." -ForegroundColor Green
+Write-Host "`nNIE ruszalem: Valoranta, Riot Vanguard, Defendera, zapory, Windows Update." -ForegroundColor Green

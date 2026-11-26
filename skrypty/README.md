@@ -32,7 +32,7 @@ Potem po kolei, **jeden naraz**, i po każdym sprawdź, czy komputer działa:
 | Skrypt | Co robi | Co zostaje nietknięte |
 |---|---|---|
 | `1-sprzatanie-C.ps1` | zwalnia ~70 GB na C:, raport o BSOD i o AppData | **wszystkie gry**, `C:\Windows\Installer`, plik wymiany |
-| `2-odinstaluj-nadmiar.ps1` | usuwa SignalRGB, OpenRGB, RGB Fusion, Razer Cortex, McAfee WebAdvisor; sprawdza, czym jest `Off.exe` | NZXT CAM, iCUE, Synapse, G HUB, SteelSeries GG, AORUS LCD, Defender, zapora, Windows Update, Valorant, Vanguard, Malwarebytes |
+| `2-odinstaluj-nadmiar.ps1` | usuwa SignalRGB, OpenRGB, RGB Fusion, Razer Cortex, McAfee WebAdvisor, Malwarebytes; sprawdza, czym jest `Off.exe` | NZXT CAM, iCUE, Synapse, G HUB, SteelSeries GG, AORUS LCD, Defender, zapora, Windows Update, Valorant, Vanguard |
 | `3-autostart.ps1` | wyłącza 11 nadmiarowych wpisów autostartu (kopia `.reg` do cofnięcia) | SecurityHealth, RtkAudUService, NZXT CAM |
 
 ## Jak cofnąć
