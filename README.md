@@ -10,6 +10,7 @@ Cel: **60–120 FPS na ekranie, priorytet małe opóźnienie.**
 | **`diagnoza.ps1`** | Skrypt PowerShell **tylko do odczytu** — nic nie zmienia. Zbiera dane o sprzęcie i zapisuje `raport.txt` na Pulpicie. **Uruchom to pierwsze.** |
 | **`USTAWIENIA.md`** | Instrukcja krok po kroku: PS5, kable, program do generowania klatek, Windows, NVIDIA, czyszczenie systemu |
 | **`BIOS_WIN11.md`** | Włączenie fTPM i Secure Boot na Gigabyte B550 Gaming X V2 + darmowa aktualizacja do Windows 11 (z ostrzeżeniem MBR→GPT) |
+| **`OPTYMALIZACJE.md`** | Najlepsze optymalizacje pod ten konkretny sprzęt: XMP/FCLK, PBO + Curve Optimizer, undervolt RTX 3070 Ti, Resizable BAR, Windows, pełne czyszczenie, ochrona QD-OLED, lista odrzuconych mitów |
 
 ## Kolejność działania
 
@@ -17,6 +18,7 @@ Cel: **60–120 FPS na ekranie, priorytet małe opóźnienie.**
 2. **`BIOS_WIN11.md`** → fTPM, Secure Boot, Windows 11
 3. **Kup grabber** (patrz niżej)
 4. **`USTAWIENIA.md`** → konfiguracja wszystkiego
+5. **`OPTYMALIZACJE.md`** → wyciśnięcie reszty wydajności (TOP 8 na początku pliku)
 
 ## Jak uruchomić diagnozę
 

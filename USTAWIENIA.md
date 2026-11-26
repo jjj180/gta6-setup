@@ -315,11 +315,15 @@ Lossless Scaling skaluje **okno**, więc potrzebujesz okna z obrazem z grabbera:
 | `Ustawienia` → `Gry` → `Tryb gry` | **Włączony** |
 | `Ustawienia` → `Gry` → `Przechwytywanie` / Game DVR | **Wyłączone** (nagrywanie w tle zjada wydajność) |
 | `Ustawienia` → `Gry` → `Pasek gier Xbox` | **Wyłączony** |
-| `Ustawienia` → `System` → `Ekran` → `Grafika` → `Zmień domyślne ustawienia grafiki` → **Planowanie GPU z akceleracją sprzętową (HAGS)** | **Włączone** |
+| `Ustawienia` → `System` → `Ekran` → `Grafika` → `Zmień domyślne ustawienia grafiki` → **Planowanie GPU z akceleracją sprzętową (HAGS)** | **przetestuj A/B — patrz niżej** |
 | tam samo: **Optymalizacje dla gier okienkowych** (tylko Win11) | **Włączone** |
 | `Panel sterowania` → `Opcje zasilania` | **Zrównoważony** lub **Wysoka wydajność** (nie „Oszczędzanie energii”) |
 
-> HAGS: włączenie jest zalecane dla generowania klatek, ale na niektórych konfiguracjach powoduje mikroprzycinki. **Przetestuj w obie strony** — 20 minut gry z włączonym, 20 z wyłączonym. Wymaga restartu.
+> ⚠️ **HAGS — u ciebie to NIE jest „po prostu włącz”.** HAGS rezerwuje **do ~1 GB VRAM** na kolejki poleceń po stronie karty. Masz 8 GB, a sama Veyra rezerwuje dodatkowo 1,3–2,3 GB na budżet opóźnienia — więc HAGS może wywołać **więcej** przycinek, niż usuwa. Z drugiej strony poprawia tempo klatek i jest wymagany przez część technik generowania klatek.
+>
+> **Przetestuj A/B:** 20 minut gry z włączonym, restart, 20 minut z wyłączonym, w tym samym miejscu. Zostaw to, co dało **równiejsze tempo klatek** (nie wyższy średni FPS). Nie chcesz testować? Na 8 GB VRAM z generowaniem klatek postaw na **wyłączone** jako bezpieczniejszy wybór.
+>
+> Szczegóły i pomiary: `OPTYMALIZACJE.md`, rozdział C3.
 
 ### 6b. Monitory
 
@@ -421,6 +425,8 @@ irm "https://christitus.com/win" | iex
 
 Co z presetu Standard jest faktycznie przydatne dla ciebie: wyłączenie telemetrii, wyłączenie Cortany, wyłączenie podpowiedzi/reklam w menu Start, wyłączenie hibernacji (zwalnia kilka GB), wyłączenie zbędnych zadań zaplanowanych.
 
+> **Znacznie szerszy zestaw optymalizacji** — XMP i FCLK, PBO z Curve Optimizerem, undervolt GPU, Resizable BAR, ochrona QD-OLED przed wypaleniem, pełna lista czyszczenia i lista odrzuconych mitów — jest w osobnym pliku **`OPTYMALIZACJE.md`**.
+
 ### 7c. Narzędzia, których NIE instalować
 
 ❌ **Odrzucone świadomie** (obiecują „boost”, a realnie nic nie dają albo szkodzą):
@@ -491,7 +497,7 @@ Rób to **tylko** jeśli wszystko z rozdziałów 1–7 działa stabilnie. Kolejn
 **Windows**
 - [ ] Punkt przywracania zrobiony
 - [ ] Tryb gry włączony, Game DVR wyłączony
-- [ ] HAGS włączony (i przetestowany w obie strony)
+- [ ] HAGS przetestowany A/B (na 8 GB VRAM domyślnie raczej wyłączony)
 - [ ] MSI = monitor główny, 2560×1440, 240 Hz
 - [ ] G27Q2: 200 Hz
 - [ ] G-Sync włączony dla pełnego ekranu i okna
