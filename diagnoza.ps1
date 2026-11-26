@@ -250,12 +250,12 @@ using System.Runtime.InteropServices;
 public class DispEnum {
     [StructLayout(LayoutKind.Sequential, CharSet=CharSet.Ansi)]
     public struct DISPLAY_DEVICE {
+        public int cb;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst=32)] public string DeviceName;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst=128)] public string DeviceString;
         public int StateFlags;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst=128)] public string DeviceID;
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst=128)] public string DeviceKey;
-        public int cb;
     }
     [StructLayout(LayoutKind.Sequential, CharSet=CharSet.Ansi)]
     public struct DEVMODE {
